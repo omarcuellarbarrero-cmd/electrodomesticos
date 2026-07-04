@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asistente Técnico - Electrodomésticos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="app-header">
+            <div class="logo-container">
+                <img src="Logo-nuevo-metodo-oc.webp" alt="Logo" class="logo-main">
+            </div>
+            <h1>🔧 Asistente Técnico Multi-Hogar</h1>
+            <p class="subtitle">Diagnóstico inteligente de electrodomésticos</p>
+            <button id="logoutBtn" class="btn-logout">🚪 Salir</button>
+        </header>
+
+        <main class="app-main">
+            <!-- Selección de electrodoméstico -->
+            <section class="card">
+                <h2>🏠 Seleccione el electrodoméstico</h2>
+                <div class="appliance-selector">
+                    <button type="button" class="btn-appliance" data-type="TV TRC">
+                        <span class="appliance-icon">📺</span>
+                        <span class="appliance-name">TV TRC</span>
+                        <small>Tubo de rayos catódicos</small>
+                    </button>
+                    <button type="button" class="btn-appliance" data-type="TV LCD/LED">
+                        <span class="appliance-icon">🖥️</span>
+                        <span class="appliance-name">TV LCD/LED</span>
+                        <small>Pantalla plana</small>
+                    </button>
+                    <button type="button" class="btn-appliance" data-type="Nevera">
+                        <span class="appliance-icon">🧊</span>
+                        <span class="appliance-name">Nevera</span>
+                        <small>Refrigerador</small>
+                    </button>
+                    <button type="button" class="btn-appliance" data-type="Lavadora">
+                        <span class="appliance-icon">🧺</span>
+                        <span class="appliance-name">Lavadora</span>
+                        <small>Lava ropa</small>
+                    </button>
+                    <button type="button" class="btn-appliance" data-type="Secadora">
+                        <span class="appliance-icon">🔥</span>
+                        <span class="appliance-name">Secadora</span>
+                        <small>Seca ropa</small>
+                    </button>
+                    <button type="button" class="btn-appliance" data-type="Aire Acondicionado">
+                        <span class="appliance-icon">❄️</span>
+                        <span class="appliance-name">Aire Acondicionado</span>
+                        <small>Climatización</small>
+                    </button>
+                </div>
+                <p id="applianceSelected" class="selection-indicator"></p>
+            </section>
+
+            <!-- Formulario de búsqueda -->
+            <section class="card">
+                <h2>🔍 Describa el problema</h2>
+                <form id="diagnosticForm">
+                    <div class="form-group">
+                        <label for="brand">Marca:</label>
+                        <input type="text" id="brand" placeholder="Ej: Samsung, LG, Whirlpool..." required>
+                    </div>
+                    <div class="form-group">
+                        <label for="model">Modelo:</label>
+                        <input type="text" id="model" placeholder="Ej: RT32, WF457, etc." required>
+                    </div>
+                    <div class="form-group">
+                        <label for="symptom">Síntoma o falla:</label>
+                        <textarea id="symptom" rows="3" placeholder="Ej: No enciende, no enfría, hace ruido extraño, no centrifuga..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary">🔍 Buscar Diagnóstico</button>
+                </form>
+            </section>
+
+            <!-- Resultados -->
+            <section class="card" id="resultSection" style="display: none;">
+                <h2>📋 Diagnóstico</h2>
+                
+                <button id="btnVoice" class="btn-voice-simple" title="Escuchar diagnóstico">
+                    <span class="voice-icon-simple">🔊</span>
+                    <span id="voiceLabel">Escuchar diagnóstico</span>
+                </button>
+                
+                <div class="result-content" id="resultContent"></div>
+                <button id="newSearchBtn" class="btn-secondary">🔄 Nuevo Diagnóstico</button>
+            </section>
+        </main>
+
+        <footer class="app-footer">
+            <p>Asistente Técnico v1.0 — Powered by Groq AI</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

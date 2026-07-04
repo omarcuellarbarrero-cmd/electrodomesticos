@@ -1,0 +1,77 @@
+/* ============================================
+   SELECTOR DE ELECTRODOMÉSTICOS
+   ============================================ */
+.appliance-selector {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.btn-appliance {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 20px 15px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.btn-appliance:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.5);
+}
+
+.btn-appliance.active {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    transform: scale(1.05);
+}
+
+.appliance-icon {
+    font-size: 32px;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.appliance-name {
+    font-size: 16px;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.btn-appliance small {
+    font-size: 12px;
+    opacity: 0.9;
+    display: block;
+}
+
+#symptom {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: inherit;
+    resize: vertical;
+}
+
+#symptom:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+@media (max-width: 768px) {
+    .appliance-selector {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .appliance-selector {
+        grid-template-columns: 1fr;
+    }
+}
