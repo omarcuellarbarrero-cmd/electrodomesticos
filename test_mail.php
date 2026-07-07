@@ -7,7 +7,7 @@
 echo "<h2>📧 Diagnóstico de Envío de Correo</h2>";
 
 // Configuración
-$to = 'soporte@omarcuellar.co'; // ← CAMBIA ESTO POR TU CORREO
+$to = 'omarcuellarbarrero@gmail.com'; // ← CAMBIA ESTO POR TU CORREO
 $subject = 'Prueba de envío desde servidor';
 $message = 'Este es un correo de prueba enviado desde el servidor.';
 $headers = 'From: no-reply@omarcuellar.co' . "\r\n" .
