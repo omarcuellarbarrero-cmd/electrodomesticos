@@ -16,3 +16,4 @@ users.db
 .DS_Store
 Thumbs.db
 desktop.ini
+webhook_log.txt
