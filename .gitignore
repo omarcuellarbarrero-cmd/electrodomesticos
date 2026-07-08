@@ -18,4 +18,3 @@ Thumbs.db
 desktop.ini
 webhook_log.txt
 # Credenciales de correo (SMTP)
-mailer.php
